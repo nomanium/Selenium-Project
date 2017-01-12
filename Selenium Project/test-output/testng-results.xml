@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13248" started-at="2017-01-12T10:16:27Z" finished-at="2017-01-12T10:16:40Z">
+  <suite name="Default suite" duration-ms="35368" started-at="2017-01-12T19:34:41Z" finished-at="2017-01-12T19:35:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13248" started-at="2017-01-12T10:16:27Z" finished-at="2017-01-12T10:16:40Z">
-      <class name="com.Test.Test2">
-        <test-method status="PASS" signature="openthebrowser()[pri:0, instance:com.Test.Test2@27c20538]" name="openthebrowser" is-config="true" duration-ms="7350" started-at="2017-01-12T05:16:27Z" finished-at="2017-01-12T05:16:34Z">
+    <test name="Default test" duration-ms="35368" started-at="2017-01-12T19:34:41Z" finished-at="2017-01-12T19:35:17Z">
+      <class name="com.Test.Test3">
+        <test-method status="PASS" signature="openbrowser()[pri:0, instance:com.Test.Test3@27c20538]" name="openbrowser" is-config="true" duration-ms="10342" started-at="2017-01-12T14:34:41Z" finished-at="2017-01-12T14:34:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openthebrowser -->
-        <test-method status="PASS" signature="Insertregisteredemail()[pri:0, instance:com.Test.Test2@27c20538]" name="Insertregisteredemail" duration-ms="4709" started-at="2017-01-12T05:16:34Z" finished-at="2017-01-12T05:16:39Z">
+        </test-method> <!-- openbrowser -->
+        <test-method status="PASS" signature="CreateAccount()[pri:0, instance:com.Test.Test3@27c20538]" name="CreateAccount" duration-ms="23519" started-at="2017-01-12T14:34:52Z" finished-at="2017-01-12T14:35:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Insertregisteredemail -->
-        <test-method status="PASS" signature="ScreenCapture(org.testng.ITestResult)[pri:0, instance:com.Test.Test2@27c20538]" name="ScreenCapture" is-config="true" duration-ms="1" started-at="2017-01-12T05:16:39Z" finished-at="2017-01-12T05:16:39Z">
+        </test-method> <!-- CreateAccount -->
+        <test-method status="PASS" signature="ScreenCapture(org.testng.ITestResult)[pri:0, instance:com.Test.Test3@27c20538]" name="ScreenCapture" is-config="true" duration-ms="1" started-at="2017-01-12T14:35:15Z" finished-at="2017-01-12T14:35:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Insertregisteredemail status=SUCCESS method=Test2.Insertregisteredemail()[pri:0, instance:com.Test.Test2@27c20538] output={null}]]]>
+                <![CDATA[[TestResult name=CreateAccount status=SUCCESS method=Test3.CreateAccount()[pri:0, instance:com.Test.Test3@27c20538] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ScreenCapture -->
-        <test-method status="PASS" signature="Result()[pri:0, instance:com.Test.Test2@27c20538]" name="Result" is-config="true" duration-ms="1163" started-at="2017-01-12T05:16:39Z" finished-at="2017-01-12T05:16:40Z">
+        <test-method status="PASS" signature="Result()[pri:0, instance:com.Test.Test3@27c20538]" name="Result" is-config="true" duration-ms="1475" started-at="2017-01-12T14:35:15Z" finished-at="2017-01-12T14:35:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Result -->
-      </class> <!-- com.Test.Test2 -->
+      </class> <!-- com.Test.Test3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

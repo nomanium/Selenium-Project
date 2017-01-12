@@ -53,7 +53,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 			objHomePage.clickSignIn();
 			test.log(Status.INFO, "Clicked on Sign In button successfully");
 			objSignIn = new SignInPage(driver);
-			objSignIn.Insertemail();
+			objSignIn.Insertinavalidemail();
 			test.log(Status.INFO, "Invalid Email inserted successfully");
 			objSignIn.GetAttributeNewEmail();
 			test.log(Status.INFO, "Email address field turned red successfully");
