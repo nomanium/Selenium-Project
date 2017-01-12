@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44139" started-at="2017-01-11T19:30:04Z" finished-at="2017-01-11T19:30:48Z">
+  <suite name="Default suite" duration-ms="16090" started-at="2017-01-12T00:37:29Z" finished-at="2017-01-12T00:37:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44139" started-at="2017-01-11T19:30:04Z" finished-at="2017-01-11T19:30:48Z">
+    <test name="Default test" duration-ms="16090" started-at="2017-01-12T00:37:29Z" finished-at="2017-01-12T00:37:45Z">
       <class name="com.Test.Test1">
-        <test-method status="PASS" signature="openthebrowser()[pri:0, instance:com.Test.Test1@27c20538]" name="openthebrowser" is-config="true" duration-ms="30929" started-at="2017-01-11T14:30:04Z" finished-at="2017-01-11T14:30:35Z">
+        <test-method status="PASS" signature="openthebrowser()[pri:0, instance:com.Test.Test1@27c20538]" name="openthebrowser" is-config="true" duration-ms="9069" started-at="2017-01-11T19:37:29Z" finished-at="2017-01-11T19:37:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openthebrowser -->
-        <test-method status="PASS" signature="InvalidEmail()[pri:0, instance:com.Test.Test1@27c20538]" name="InvalidEmail" duration-ms="9224" started-at="2017-01-11T14:30:35Z" finished-at="2017-01-11T14:30:44Z">
+        <test-method status="PASS" signature="InvalidEmail()[pri:0, instance:com.Test.Test1@27c20538]" name="InvalidEmail" duration-ms="4132" started-at="2017-01-11T19:37:38Z" finished-at="2017-01-11T19:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidEmail -->
-        <test-method status="PASS" signature="ScreenCapture(org.testng.ITestResult)[pri:0, instance:com.Test.Test1@27c20538]" name="ScreenCapture" is-config="true" duration-ms="3" started-at="2017-01-11T14:30:44Z" finished-at="2017-01-11T14:30:44Z">
+        <test-method status="PASS" signature="ScreenCapture(org.testng.ITestResult)[pri:0, instance:com.Test.Test1@27c20538]" name="ScreenCapture" is-config="true" duration-ms="5" started-at="2017-01-11T19:37:43Z" finished-at="2017-01-11T19:37:43Z">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ScreenCapture -->
-        <test-method status="PASS" signature="Result()[pri:0, instance:com.Test.Test1@27c20538]" name="Result" is-config="true" duration-ms="3892" started-at="2017-01-11T14:30:44Z" finished-at="2017-01-11T14:30:48Z">
+        <test-method status="PASS" signature="Result()[pri:0, instance:com.Test.Test1@27c20538]" name="Result" is-config="true" duration-ms="2852" started-at="2017-01-11T19:37:43Z" finished-at="2017-01-11T19:37:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Result -->
