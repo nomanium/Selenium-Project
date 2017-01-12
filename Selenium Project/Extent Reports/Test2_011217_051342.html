@@ -40,7 +40,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-				<span class='label suite-start-time'>Jan 11, 2017 5:50:15 PM</span>
+				<span class='label suite-start-time'>Jan 12, 2017 5:13:43 AM</span>
 			</a>
 			<a href='#!'>
 				<span class='label'>v3.0.1</span>
@@ -62,6 +62,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -112,10 +113,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>1</span> test(s) passed</span>
+					<span><span class='strong'>0</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
+					<span class='strong'>1</span> test(s) failed, <span class='strong'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -127,10 +128,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>1</span> step(s) passed</span>
+					<span><span class='strong'>0</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>0</span> step(s) failed, <span class='strong'>3</span> others
+					<span class='strong'>1</span> step(s) failed, <span class='strong'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -145,17 +146,17 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Invalid Email Varification</span>
-						<span class='test-time'>Jan 11, 2017 5:50:20 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>Registered Email Varification</span>
+						<span class='test-time'>Jan 12, 2017 5:13:50 AM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 11, 2017 5:50:20 PM</span>
-	<span class='label end-time'>Jan 11, 2017 5:50:23 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+700ms</span>
+	<span class='label start-time'>Jan 12, 2017 5:13:50 AM</span>
+	<span class='label end-time'>Jan 12, 2017 5:13:55 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+121ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -169,27 +170,25 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>5:50:22 PM</td>
+					<td class='timestamp'>5:13:51 AM</td>
 					<td class='step-details'>Clicked on Sign In button successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>5:50:23 PM</td>
-					<td class='step-details'>Invalid Email inserted successfully</td>
+					<td class='timestamp'>5:13:52 AM</td>
+					<td class='step-details'>Registered Email inserted successfully</td>
 				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>5:50:23 PM</td>
-					<td class='step-details'>Email address field turned red successfully</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>5:50:23 PM</td>
-					<td class='step-details'>Passed</td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:13:55 AM</td>
+					<td class='step-details'>Failed. No error message displayed. Screenshot attached below.</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\Chris\workspace\Selenium Project\Extent Reports\Noman_011217_051355.png' width='10%' src='' data-src='C:\Users\Chris\workspace\Selenium Project\Extent Reports\Noman_011217_051355.png'></li>
+							</ul>
 					</div>
 				</li>
 			</ul>
@@ -230,25 +229,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 11, 2017 5:50:15 PM</div>
+					<div class='panel-lead'>Jan 12, 2017 5:13:43 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 11, 2017 5:50:23 PM</div>
+			 		<div class='panel-lead'>Jan 12, 2017 5:13:55 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>8,175ms</div>
+					<div class='panel-lead'>12,200ms</div>
 				</div>
 			</div>
 		</div>
@@ -260,22 +259,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 1,
-				failChild: 0,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 3,
-				exceptionsChild: 0,
+				infoChild: 2,
+				exceptionsChild: 1,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

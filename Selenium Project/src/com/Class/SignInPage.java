@@ -21,12 +21,12 @@ public class SignInPage {
 	WebDriver driver;
 	
 	@FindBy(xpath=".//*[@id='email_create']")
-	WebElement NewEmail;
-	
+	WebElement NewEmail;	
 	@FindBy(xpath=".//*[@id='SubmitCreate']")
 	WebElement createaccbutton;
+	@FindBy(xpath=".//*[@id='create_account_error']")
+	WebElement createaccerror;
 	
-
 	
 	public SignInPage(WebDriver driver){
 		this.driver = driver;
@@ -34,15 +34,27 @@ public class SignInPage {
 	}
 	
 	public void Insertemail(){
-		Xls_Reader xls = new Xls_Reader("C:\\Users\\Chris\\workspace\\Selenium Project\\Test Data.xlsx");
-		String Invalidemail=xls.getCellData("Sheet1", 2, 2);
+		Xls_Reader xls = new Xls_Reader(System.getProperty("user.dir")+ "\\Test Data.xlsx");
+		String Invalidemail=xls.getCellData("Sheet1", 1, 2);
 		NewEmail.sendKeys(Invalidemail);
+		createaccbutton.click();
+		}
+	
+	public void Insertregisteredemail(){
+		Xls_Reader xls = new Xls_Reader(System.getProperty("user.dir")+ "\\Test Data.xlsx");
+		String registeredlidemail=xls.getCellData("Sheet1", 1, 3);
+		NewEmail.sendKeys(registeredlidemail);
 		createaccbutton.click();
 		}
 	
 	public void GetAttributeNewEmail(){
 		String FontColor=(NewEmail.getCssValue("color"));
 			Assert.assertTrue(FontColor.contains("241"));
+		}
+	public void geterrormessage(){
+		String errorMsg=createaccerror.getText();
+		Assert.assertEquals(errorMsg, "An account using this email address has already been registered. Please enter a valid password or request a new one.");
+			
 		}
 	}
 

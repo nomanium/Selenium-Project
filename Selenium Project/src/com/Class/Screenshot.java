@@ -23,7 +23,7 @@ public class Screenshot {
 		Properties prop = new Properties();
     	InputStream input = null;
 	try {
-		input = new FileInputStream("C:\\Users\\Chris\\workspace\\Selenium Project\\Data.properties");
+		input = new FileInputStream(System.getProperty("user.dir")+ "\\Data.properties");
 	}catch (FileNotFoundException e) {
 		
 		e.printStackTrace();}
