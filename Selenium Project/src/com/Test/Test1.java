@@ -42,7 +42,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 		String ImgPath;
 		String ReportPath;
 		
-		DateFormat df = new SimpleDateFormat("ddMMyy_HHmmss");
+		DateFormat df = new SimpleDateFormat("MMddyy_HHmmss");
 		Date dateobj = new Date();
 		String FileName = df.format(dateobj);
 		
@@ -63,14 +63,14 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 		@BeforeTest	
 		public void openthebrowser(){
 			
-			ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(ReportPath+"Test1_"+FileName+".html");
+			ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+ "\\Extent Reports\\Test1_"+FileName+".html");
 	    	extent = new ExtentReports();
 	    	extent.attachReporter(htmlReporter);
 			
 	    	Properties prop = new Properties();
 	    	InputStream input = null;
 		try {
-			input = new FileInputStream("C:\\Users\\Chris\\workspace\\Selenium Project\\Data.properties");
+			input = new FileInputStream(System.getProperty("user.dir")+ "\\Data.properties");
 		}catch (FileNotFoundException e) {
 			
 			e.printStackTrace();}
@@ -91,43 +91,35 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 		if(brType.contains("chrome")){
 			System.setProperty("webdriver.chrome.driver", ChromePath);
 	        driver = new ChromeDriver();
-	   //     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	        driver.manage().window().maximize();
 	        driver.get(MainUrl);
 	        
 		}else if(brType.contains("firefox")){
 			System.setProperty("webdriver.gecko.driver", GeckoPath);
 	        driver = new FirefoxDriver();	
-	        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	        driver.manage().window().maximize();
 	        driver.get(MainUrl);
 	        
 		}else if(brType.contains("ie")){
 			System.setProperty("webdriver.ie.driver", IEPath);
 	        driver = new InternetExplorerDriver();	
-	        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	        driver.manage().window().maximize();
 	        driver.get(MainUrl);
 	}
 	}
 
 
-		@AfterMethod
-		public void ScreenCapture(ITestResult result){
-			if(result.getStatus()==TestResult.FAILURE){
-				Screenshot sc = new Screenshot();
-				String imagePath = sc.CaptureScreen(driver, ImgPath+"Noman_"+FileName+".jpg");
-		
-				try {
+		@AfterMethod	//Captures Screenshot if result fails and attach to extent report.
+		public void ScreenCapture(ITestResult result) throws IOException{
+			if(result.getStatus()==ITestResult.FAILURE){
+				String imagePath = Screenshot.CaptureScreen(driver,"Test1_"+FileName);
 				test.addScreenCaptureFromPath(imagePath);
-				test.log(Status.FAIL, "Failed");
-			}catch (IOException e) {
-				e.printStackTrace();}
-			
-			}else{
-				test.log(Status.PASS, "Passed");
-				}}
+				test.log(Status.FAIL, "Failed. Color did not match as expected. Screenshot attached below:");
+			}}
 			
 		@AfterTest
 		public void Result(){
 			extent.flush();			
-			driver.get(ReportPath+"Test1_"+FileName+".html");
+			driver.get(System.getProperty("user.dir")+ "\\Extent Reports\\Test1_"+FileName+".html");
 			}
 		}

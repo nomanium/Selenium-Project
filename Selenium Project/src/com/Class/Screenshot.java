@@ -35,20 +35,20 @@ public class Screenshot {
 		}
 		ImgPath=prop.getProperty("ScreenShotPath");
 		
-		DateFormat df = new SimpleDateFormat("ddMMyy_HHmmss");
+		DateFormat df = new SimpleDateFormat("MMddyy_HHmmss");
 		Date dateobj = new Date();
 		String FileName = df.format(dateobj);
 		
 		TakesScreenshot Scn = (TakesScreenshot) driver;
 		File srcFile = Scn.getScreenshotAs(OutputType.FILE);
-		String dest =(ImgPath+"Noman_"+FileName+".jpg");
+		String dest =(ImgPath+"Noman_"+FileName+".png");
 		File destFile = new File(dest);
 		try{
 			FileUtils.copyFile(srcFile, destFile);
 		}catch(IOException e){
 			e.getStackTrace();
 		}
-		return dest+ ".jpg";
+		return dest;
 		
 		
 	}
